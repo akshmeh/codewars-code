@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Some numbers have funny properties. For example:
+
+89 --> 8¹ + 9² = 89 * 1
+
+695 --> 6² + 9³ + 5⁴= 1390 = 695 * 2
+
+46288 --> 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+    <script>
+        digPow(695,2)
+        function digPow(n, p){
+            var arrayString = n.toString().split('')
+            var resultArray =[]
+            for(var i = 0; i< arrayString.length;i++){
+                resultArray.push(arrayString[i]**(p+i)) 
+            }
+            var result = resultArray.reduce((a,b)=>{return a+b})
+            console.log(result/n);
+            return (result/n)
+        }
+    </script>
+</body>
+</html>
