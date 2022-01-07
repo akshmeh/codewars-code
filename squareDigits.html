@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. -->
+    <script>
+        function squareDigits(num){
+            var numArray = [],
+            calcNum,
+            calcString,
+            resultArray = [],
+            finalString,
+            outputNum
+            var numString = num.toString();
+            for(var i = 0; i<numString.length ;i++){
+                numArray.push(numString.charAt(i));
+                
+            }
+            for(var j = 0; j<numArray.length;j++){
+                calcNum = +numArray[j]
+                calcString = (calcNum*calcNum).toString();
+                resultArray.push(+calcString);
+                
+            }
+            finalString = resultArray.join("");
+            outputNum = +finalString
+            return outputNum;
+        }
+        squareDigits(6368)
+    </script>
+</body>
+</html>
