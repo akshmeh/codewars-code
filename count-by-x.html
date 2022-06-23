@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Create a function with two arguments that will return an array of the first (n) multiples of (x).
+
+Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+Return the results as an array (or list in Python, Haskell or Elixir).
+
+Examples:
+
+countBy(1,10) === [1,2,3,4,5,6,7,8,9,10]
+countBy(2,5) === [2,4,6,8,10]
+*/
+        function countBy(x, n) {
+  let z = [];
+        for(i=1;i<=n;i++){
+            z.push(x*i)
+        }
+  return z;
+}
+    </script>
+</body>
+</html>
